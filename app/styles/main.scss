@@ -1,6 +1,6 @@
-// bower:scss
+
 @import "bootstrap";
-// endbower
+
 
 
 .browserupgrade {
@@ -143,14 +143,17 @@ section > .row {
 
 @media print{    
    html {
-		font-size: 66%;
+		font-size: 65%;
 	}
 	.container {
 		max-width: 90%;
 	}
-	.social a {
-		display: block;
-		margin: 0;
+	.social {
+		margin-bottom: 1rem;
+		a {
+			display: block;
+			margin: 0;
+		}
 	}
 	a:after{
 		content:" (" attr(href) ") ";
@@ -158,10 +161,13 @@ section > .row {
 		font-weight:300;
 		text-transform: lowercase;
 	}
-	a[href^="tel:"]:after{
-		content:none;
+	a[href^="tel:"],
+	a[href^="mailto:"] {
+		&:after{
+			content:none;
+		}
 	}
-	p {
-		margin: 0;
+	.jumbotron {
+		margin-bottom: 1.5rem;
 	}
 }
