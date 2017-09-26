@@ -157,17 +157,11 @@ section > .row {
 			margin: 0;
 		}
 	}
-	a:after{
+	a[href^="http"]:after{
 		content:" (" attr(href) ") ";
 		font-size:0.8em;
 		font-weight:300;
 		text-transform: lowercase;
-	}
-	a[href^="tel:"],
-	a[href^="mailto:"] {
-		&:after{
-			content:none;
-		}
 	}
 	.jumbotron {
 		margin-bottom: 1.5rem;
